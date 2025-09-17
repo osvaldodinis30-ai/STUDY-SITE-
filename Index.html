@@ -1,0 +1,153 @@
+
+Excelente, Osvaldo! Vamos publicar o site Study agora mesmo. Aqui está o código completo que você deve copiar e colar no GitHub para criar o arquivo index.html:
+
+---
+
+📄 Etapa 1: Criar o arquivo index.html
+
+1. Vá para github.com e entre na sua conta.
+2. Crie um novo repositório chamado study-site.
+3. Clique em Add file → Create new file.
+4. Nomeie o arquivo como index.html.
+5. Copie e cole o código abaixo:
+
+`html
+<!-- CÓDIGO COMPLETO DO SITE STUDY -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Study</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f0f0f0; color: #333; }
+    header, footer { background-color: #006699; color: white; text-align: center; padding: 30px 20px; }
+    nav { background-color: #004466; text-align: center; padding: 10px; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    section { padding: 60px 20px; text-align: center; }
+    h2 { font-size: 2em; color: #004466; }
+    form { max-width: 500px; margin: auto; text-align: left; }
+    input, textarea { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
+    button { background-color: #006699; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    .cards { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
+    .cards div { background-color: white; padding: 20px; width: 300px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .whatsapp { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 15px; border-radius: 50%; text-decoration: none; font-size: 24px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+    .social a { margin: 0 10px; text-decoration: none; font-size: 24px; color: white; }
+    table { width: 90%; margin: auto; border-collapse: collapse; }
+    th, td { padding: 10px; border: 1px solid #ccc; }
+    th { background-color: #006699; color: white; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo-study.png" alt="Logotipo Study" style="width: 100px;">
+  <h1>Study</h1>
+  <p>Estude com propósito. Aulas simples, conteúdo direto, sem exposição.</p>
+  <div class="social">
+    <a href="https://www.facebook.com/OsvaldoDïnïs" target="_blank">📘</a>
+    <a href="https://www.instagram.com/Osvaldodinis30" target="blank">📸</a>
+    <a href="https://www.youtube.com/@Osvaldodinis30" target="blank">📺</a>
+  </div>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#aulas">Aulas</a>
+  <a href="#login">Login</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#convite">Convite</a>
+  <a href="#painel">Painel</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre">
+  <h2>Sobre o Study</h2>
+  <p>O Study nasceu com a missão de apoiar jovens estudantes em sua jornada de aprendizagem. Este espaço foi criado para compartilhar ideias, técnicas de estudo, conteúdos motivacionais e ferramentas úteis — tudo com simplicidade, leveza e anonimato.</p>
+</section>
+
+<section id="aulas" style="background-color: #f0f8ff;">
+  <h2>Aulas em Destaque</h2>
+  <div class="cards">
+    <div>
+      <h3>Como Estudar com Foco</h3>
+      <iframe width="100%" height="180" src="https://www.youtube.com/embed/VIDEOID1" frameborder="0" allowfullscreen></iframe>
+      <p>Aprenda técnicas para manter a concentração e evitar distrações.</p>
+    </div>
+    <div>
+      <h3>Organização de Estudos</h3>
+      <iframe width="100%" height="180" src="https://www.youtube.com/embed/VIDEOID2" frameborder="0" allowfullscreen></iframe>
+      <p>Dicas práticas para montar um plano de estudos eficiente.</p>
+    </div>
+  </div>
+</section>
+
+<section id="login">
+  <h2>Área do Aluno</h2>
+  <form action="#" method="post">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required>
+    <button type="submit">Entrar</button>
+  </form>
+</section>
+
+<section id="quiz" style="background-color: #f0f8ff;">
+  <h2>Teste seus Conhecimentos</h2>
+  <form id="quizForm">
+    <p><strong>1. Qual é a capital de Angola?</strong></p>
+    <label><input type="radio" name="q1" value="Luanda"> Luanda</label><br>
+    <label><input type="radio" name="q1" value="Benguela"> Benguela</label><br>
+    <label><input type="radio" name="q1" value="Lubango"> Lubango</label><br><br>
+
+    <p><strong>2. Qual é a fórmula da água?</strong></p>
+    <label><input type="radio" name="q2" value="H2O"> H₂O</label><br>
+    <label><input type="radio" name="q2" value="CO2"> CO₂</label><br>
+    <label><input type="radio" name="q2" value="NaCl"> NaCl</label><br><br>
+
+    <button type="button" onclick="verificarRespostas()">Enviar</button>
+  </form>
+  <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
+
+  <script>
+    function verificarRespostas() {
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      let acertos = 0;
+      if (q1 && q1.value === "Luanda") acertos++;
+      if (q2 && q2.value === "H2O") acertos++;
+      document.getElementById("resultado").innerText = "Você acertou " + acertos + " de 2 perguntas.";
+    }
+  </script>
+</section>
+
+<section id="convite" style="background-color: #e6f2ff;">
+  <h2>Convite para Professores e Especialistas</h2>
+  <p>Receba até <strong>25% dos lucros</strong> com base nas curtidas dos seus conteúdos.  
+     Ensine com liberdade e anonimato.  
+     Assine o contrato e envie sua proposta.</p>
+  <form action="#" method="post">
+    <label for="nome">Nome ou Pseudônimo:</label>
+    <input type="text" id="nome" name="nome" required>
+    <label for="email">Email de contato:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="especialidade">Área de conhecimento:</label>
+    <input type="text" id="especialidade" name="especialidade" required>
+    <label for="mensagem">Mensagem ou proposta:</label>
+    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+    <button type="submit">Quero Participar</button>
+  </form>
+</section>
+
+<section id="painel">
+  <h2>Painel de Controle do Study</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Professor</th>
+        <th>Área</th>
+        <th>Conteúdo</th>
+        <th>Curtidas</th>
+        <th>Lucro Estimado</th>
+        <th>Pagamento (25%)</th>
+      </tr>
